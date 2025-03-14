@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/9090/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 th:object="${student}">View User Details </h2>
+<p>Name: <strong th:text="*{name}" required></strong></p>
+<p>DOB: <strongt th:text="*{dob}" required></strongt></p>
+<p>City: <strong th:text="*{city}" required></strong></p>
+<p>Email: <strong th:text="*{email}" required></strong></p>
+<a href="/table">Click here to see All Students Records</a>
+</body>
+</html>

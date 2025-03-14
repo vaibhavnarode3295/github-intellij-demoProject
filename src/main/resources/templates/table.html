@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<h2>Sample Data Table</h2>
+<table border="2">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Eligible</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.id}"></td>
+        <td th:text="${student.name}"></td>
+        <td th:text="${student.city}"></td>
+        <td th:text="${student.email}"></td>
+        <td th:text="${student.age}"></td>
+        <td th:text="${student.age > 18 ? 'yes': 'No'}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
